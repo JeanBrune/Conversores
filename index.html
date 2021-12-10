@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversores</title>
+    <link rel="stylesheet" href="conversores.css">
+</head>
+
+<body>
+    <h1>CONVERSORES ÚTEIS</h1>
+    <section id="temperatura">
+        <h1>Conversores de temperatura</h1>
+        <article class="conversores">
+
+            <div id="celcius">
+                <label for="celcius">Digite o valor em graus Celcius</label>
+                <br>
+                <input type="number" name="celcius" id="celcius_input" placeholder=" minimum -273.15 °C" min="-273.15"
+                    autofocus>
+                <button onclick="converter_celcius()">Converter</button>
+            </div>
+
+            <div id="farenheight">
+                <label for="farenheight">Digite o valor em graus Farenheight</label>
+                <br>
+                <input type="number" name="farenheight" id="farenheight_input" placeholder="minimum -459.67 °F"
+                    min="-459.67">
+                <button onclick="converter_farenheight()">Converter</button>
+            </div>
+
+            <div id="kelvin">
+                <label for="kelvin">Digite o valor em graus Kelvin</label>
+                <br>
+                <input type="number" name="kelvin" id="kelvin_input" placeholder=" minimum 0 °K" min="0">
+                <button onclick="converter_kelvin()">Converter</button>
+            </div>
+        </article>
+        <article class="resultados" id="temp">
+            <p>Valor convertido, em ºC: <span id="resultado_celcius"></span>
+            <p>Valor convertido, em ºF: <span id="resultado_farenheight"></span>
+            <p>Valor convertido, em ºK: <span id="resultado_kelvin"></span>
+        </article>
+    </section>
+
+    <section id="distancia">
+        <h1>Conversores de distância</h1>
+        <article class="conversores">
+            <div id="metro">
+                <label for="metros">Digite a distância em metros</label>
+                <br>
+                <input type="number" name="metros" id="metros_input" min="0"
+                    placeholder="0 m">
+                <button onclick="converter_metros()">Converter</button>
+            </div>
+
+            <div id="quilometros">
+                <label for="quilometros">Digite a distância em quilômetros</label>
+                <br>
+                <input type="number" name="quilometros" id="quilometros_input" min="0" placeholder=" minimun 0 Km">
+                <button onclick="converter_quilometros()">Converter</button>
+            </div>
+
+            <div id="polegadas">
+                <label for="polegadas">Digite a distância em polegadas</label>
+                <br>
+                <input type="number" name="polegadas" id="polegadas_input" min="0" placeholder=" minimum 0 in">
+                <button onclick="converter_polegadas()">Converter</button>
+            </div>
+
+            <div id="milhas">
+                <label for="milhas">Digite a distância em milhas</label><br>
+                <input type="number" name="milhas" id="milhas_input" min="0" placeholder=" minimun 0 Mi">
+                <button onclick="converter_milhas()">Converter</button>
+            </div>
+
+        </article>
+
+        <article class="resultados">
+            <p>Valor convertido, em m: <span id="resultado_metros"></span>
+            <p>Valor convertido, em Km: <span id="resultado_quilometros"></span>
+            <p>Valor convertido, em in: <span id="resultado_polegadas"></span>
+            <p>Valor convertido, em Mi: <span id="resultado_milhas"></span>
+        </article>
+        </div>
+    </section>
+
+    <section id="tempo">
+        <h1>Conversores de tempo</h1>
+        <article class="conversores">
+            <div id="segundos">
+                <label for="segundos">Digite quantos segundos deseja converter</label>
+                <br>
+                <input type="number" name="segundos" id="segundos_input" min="0" placeholder="minimum 0 s">
+                <button onclick="converter_segundos()">Converter</button>
+            </div>
+
+            <div id="minutos">
+                <label for="minutos">Digite quantos minutos deseja converter</label>
+                <br>
+                <input type="number" name="minutos" id="minutos_input" min="0" placeholder="minimum 0 min">
+                <button onclick="converter_minutos()">Converter</button>
+            </div>
+
+            <div id="horas">
+                <label for="horas">Digite quantas horas deseja converter</label>
+                <br>
+                <input type="number" name="horas" id="horas_input" min="0" placeholder="minimum 0 h">
+                <button onclick="converter_horas()">Converter</button>
+            </div>
+        </article>
+
+        <article class="resultados">
+            <p>Valor convertido, em s: <span id="resultado_segundos"></span>
+            <p>Valor convertido, em min: <span id="resultado_minutos"></span>
+            <p>Valor convertido, em h: <span id="resultado_horas"></span>
+        </article>
+
+    </section>
+    <script src="conversores.js"></script>
+</body>
+
+</html>

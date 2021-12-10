@@ -1,0 +1,58 @@
+body{
+    background-color: rgb(85, 85, 85)
+}
+h1{
+    text-align: center;
+}
+
+section{
+    background-color: rgb(168, 168, 168);
+    border: 1px solid black;
+    box-shadow: 1px 1px 3px 0px black;
+    border-radius: 4px;
+    float: left;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 350px;
+    height: 580px;
+    margin: 10px;
+    padding: 10px;
+    padding-bottom: 20px;  
+   
+}
+
+
+.resultados, .conversores{
+    background-color: rgb(173, 180, 180);
+    border: 1px solid rgb(135, 139, 139);
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 10px;
+    height: 290px;
+}
+
+.resultados{
+    height: 180px;
+}
+
+label, input{
+    padding: 5px;
+    text-align: justify;
+    margin-top: 15px;
+    width: 65%;
+}
+
+div{
+    margin:10px;
+}
+
+p{
+    text-align: left;
+    padding: 5px;
+}
+
+button{
+    font-weight: bold;
+    height: 29px
+}
+
