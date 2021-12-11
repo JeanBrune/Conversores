@@ -1,3 +1,9 @@
+//função de resetar valor de input com o click
+function apagar(id) {
+    document.getElementById(id).value = ""
+    console.log("campo " + id + " selecionado e apagado")
+}
+
 //converter celcius
 function converter_celcius(){
     //puxar o valor do input
