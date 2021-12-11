@@ -18,15 +18,14 @@
             <div id="celcius">
                 <label for="celcius">Digite o valor em graus Celcius</label>
                 <br>
-                <input type="number" name="celcius" id="celcius_input" placeholder=" minimum -273.15 °C" min="-273.15"
-                    autofocus>
+                <input type="number" name="celcius" id="celcius_input" onclick="apagar(this.id)" placeholder=" minimum -27 3.15 °C" min="-273.15" autofocus>
                 <button onclick="converter_celcius()">Converter</button>
             </div>
 
             <div id="farenheight">
                 <label for="farenheight">Digite o valor em graus Farenheight</label>
                 <br>
-                <input type="number" name="farenheight" id="farenheight_input" placeholder="minimum -459.67 °F"
+                <input type="number" name="farenheight" id="farenheight_input" onclick="apagar(this.id)" placeholder="minimum -459 .67 °F"
                     min="-459.67">
                 <button onclick="converter_farenheight()">Converter</button>
             </div>
@@ -34,7 +33,7 @@
             <div id="kelvin">
                 <label for="kelvin">Digite o valor em graus Kelvin</label>
                 <br>
-                <input type="number" name="kelvin" id="kelvin_input" placeholder=" minimum 0 °K" min="0">
+                <input type="number" name="kelvin" id="kelvin_input" onclick="apagar(this.id)" placeholder=" minimum 0 ° K" min="0">
                 <button onclick="converter_kelvin()">Converter</button>
             </div>
         </article>
@@ -52,27 +51,27 @@
                 <label for="metros">Digite a distância em metros</label>
                 <br>
                 <input type="number" name="metros" id="metros_input" min="0"
-                    placeholder="0 m">
-                <button onclick="converter_metros()">Converter</button>
+                    onclick="apagar(this.id)" placeholder="0 m">
+                 <button onclick="converter_metros()">Converter</button>
             </div>
 
             <div id="quilometros">
                 <label for="quilometros">Digite a distância em quilômetros</label>
                 <br>
-                <input type="number" name="quilometros" id="quilometros_input" min="0" placeholder=" minimun 0 Km">
+                <input type="number" name="quilometros" id="quilometros_input" min="0" onclick="apagar(this.id)" placeholder=" minimun 0 K m">
                 <button onclick="converter_quilometros()">Converter</button>
             </div>
 
             <div id="polegadas">
                 <label for="polegadas">Digite a distância em polegadas</label>
                 <br>
-                <input type="number" name="polegadas" id="polegadas_input" min="0" placeholder=" minimum 0 in">
+                <input type="number" name="polegadas" id="polegadas_input" min="0" onclick="apagar(this.id)" placeholder=" minimum 0 i n">
                 <button onclick="converter_polegadas()">Converter</button>
             </div>
 
             <div id="milhas">
                 <label for="milhas">Digite a distância em milhas</label><br>
-                <input type="number" name="milhas" id="milhas_input" min="0" placeholder=" minimun 0 Mi">
+                <input type="number" name="milhas" id="milhas_input" min="0" onclick="apagar(this.id)" placeholder=" minimun 0 M i">
                 <button onclick="converter_milhas()">Converter</button>
             </div>
 
@@ -93,21 +92,21 @@
             <div id="segundos">
                 <label for="segundos">Digite quantos segundos deseja converter</label>
                 <br>
-                <input type="number" name="segundos" id="segundos_input" min="0" placeholder="minimum 0 s">
+                <input type="number" name="segundos" id="segundos_input" min="0" onclick="apagar(this.id)" placeholder="minimum 0 s" >
                 <button onclick="converter_segundos()">Converter</button>
             </div>
 
             <div id="minutos">
                 <label for="minutos">Digite quantos minutos deseja converter</label>
                 <br>
-                <input type="number" name="minutos" id="minutos_input" min="0" placeholder="minimum 0 min">
+                <input type="number" name="minutos" id="minutos_input" min="0" onclick="apagar(this.id)" placeholder="minimum 0 mi n">
                 <button onclick="converter_minutos()">Converter</button>
             </div>
 
             <div id="horas">
                 <label for="horas">Digite quantas horas deseja converter</label>
                 <br>
-                <input type="number" name="horas" id="horas_input" min="0" placeholder="minimum 0 h">
+                <input type="number" name="horas" id="horas_input" min="0" onclick="apagar(this.id)" placeholder="minimum 0 h" >
                 <button onclick="converter_horas()">Converter</button>
             </div>
         </article>
