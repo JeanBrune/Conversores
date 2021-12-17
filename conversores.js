@@ -4,24 +4,28 @@ function apagar(id) {
     console.log("campo " + id + " selecionado e apagado")
 }
 
-//converter celcius
-function converter_celcius(){
+//converter celsius
+function converter_celsius(inputes){
     //puxar o valor do input
-    let celcius = parseFloat(document.getElementById("celcius_input").value)
-    console.log("celcius para converter: " + celcius + "°C")
+    let celsius = parseFloat(document.getElementById("celsius_input").value)
+    console.log("celsius para converter: " + celsius + "°C")
 
     //se valor menor que temperatura zero absoluto
-    if(celcius < (-273.15) ){
+    if(celsius < (-273.15) ){
         alert("ERRO. \nNão é possivel converter temperaturas menores do que o zero absoluto")
     } else{
         //aplicar a formula
-        let farenheight = (celcius * 1.8) + 32
+        let farenheight = (celsius * 1.8) + 32
         console.log(farenheight + "°F")
-        let kelvin = celcius + 273.15
+        let kelvin = celsius + 273.15
         console.log(kelvin + "°K")
         
         // retornar o valor para o html
-        document.getElementById("resultado_celcius").innerHTML= celcius.toFixed(2) 
+        //direto no valor dos inputs
+        document.getElementById("farenheight_input").value = farenheight.toFixed(2)
+        document.getElementById("kelvin_input").value = kelvin.toFixed(2)
+        //retornar para a area de resultado
+        document.getElementById("resultado_celsius").innerHTML= celsius.toFixed(2) 
         document.getElementById("resultado_farenheight").innerHTML = farenheight.toFixed(2)  
         document.getElementById("resultado_kelvin").innerHTML= kelvin.toFixed(2)
     }
@@ -38,13 +42,17 @@ function converter_farenheight(){
         alert("ERRO. \nNão é possivel converter temperaturas menores do que o zero absoluto")
     } else{
         //aplicar a formula
-        let celcius = (farenheight - 32) / 1.8
-        console.log(celcius + "°C")
+        let celsius = (farenheight - 32) / 1.8
+        console.log(celsius + "°C")
         let kelvin = ( (farenheight - 32) / 1.8) + 273.15
         console.log(kelvin + "°K")
         
         // retornar o valor para o html
-        document.getElementById("resultado_celcius").innerHTML= celcius.toFixed(2)
+        //direto para os inputs
+        document.getElementById("celsius_input").value = celsius.toFixed(2)
+        document.getElementById("kelvin_input").value = kelvin.toFixed(2)
+        //para o campo de resultado
+        document.getElementById("resultado_celsius").innerHTML= celsius.toFixed(2)
         document.getElementById("resultado_farenheight").innerHTML = farenheight.toFixed(2)   
         document.getElementById("resultado_kelvin").innerHTML= kelvin.toFixed(2)
     }
@@ -62,13 +70,18 @@ function converter_kelvin(){
     } 
     else{
         //aplicar a formula
-        let celcius = kelvin - 273.15
-        console.log(celcius + "°C")
+        let celsius = kelvin - 273.15
+        console.log(celsius + "°C")
         let farenheight = (kelvin - 273.15) * (9/5) + 32
         console.log(kelvin + "°K")
         
         // retornar o valor para o html
-        document.getElementById("resultado_celcius").innerHTML= celcius.toFixed(2)
+        //direto para os inputs
+        document.getElementById("celsius_input").value = celsius.toFixed(2)
+        document.getElementById("farenheight_input").value = farenheight.toFixed(2)
+
+        //exibir na area de resultados
+        document.getElementById("resultado_celsius").innerHTML= celsius.toFixed(2)
         document.getElementById("resultado_farenheight").innerHTML = farenheight.toFixed(2) 
         document.getElementById("resultado_kelvin").innerHTML= kelvin.toFixed(2)
     }
@@ -96,6 +109,11 @@ function converter_metros(){
     let milhas = metros / 1609
     console.log(milhas)
     // retornar o valor para o html
+        //direto para os inputs
+    document.getElementById("quilometros_input").value = quilometros.toFixed(10)
+    document.getElementById("polegadas_input").value = polegadas.toFixed(10)
+    document.getElementById("milhas_input").value = milhas.toFixed(10)
+        //exibir na area de resultados
     document.getElementById("resultado_metros").innerHTML=metros.toFixed(10)
     document.getElementById("resultado_quilometros").innerHTML= quilometros.toFixed(10)
     document.getElementById("resultado_polegadas").innerHTML=polegadas.toFixed(10)
@@ -126,6 +144,12 @@ function converter_metros(){
         console.log(milhas)
 
         // retornar o valor para o html
+        //direto para os inputs
+        document.getElementById("metros_input").value = metros.toFixed(10)
+        document.getElementById("polegadas_input").value = polegadas.toFixed(10)
+        document.getElementById("milhas_input").value = milhas.toFixed(10)
+
+        //exibir na area de resultados
         document.getElementById("resultado_metros").innerHTML=metros.toFixed(10)
         document.getElementById("resultado_quilometros").innerHTML= quilometros.toFixed(10)
         document.getElementById("resultado_polegadas").innerHTML=polegadas.toFixed(10)
@@ -156,6 +180,12 @@ function converter_polegadas(){
     console.log(milhas)
 
     // retornar o valor para o html
+    //direto para os inputs
+    document.getElementById("metros_input").value = metros.toFixed(10)
+    document.getElementById("quilometros_input").value = quilometros.toFixed(10)
+    document.getElementById("milhas_input").value = milhas.toFixed(10)
+
+    //exibir na area de resultados
     document.getElementById("resultado_metros").innerHTML=metros.toFixed(10)
     document.getElementById("resultado_quilometros").innerHTML= quilometros.toFixed(10)
     document.getElementById("resultado_polegadas").innerHTML=polegadas.toFixed(10)
@@ -186,6 +216,12 @@ function converter_milhas(){
     console.log(milhas)
 
     // retornar o valor para o html
+    //direto para os inputs
+    document.getElementById("metros_input").value = metros.toFixed(10)
+    document.getElementById("quilometros_input").value = quilometros.toFixed(10)
+    document.getElementById("polegadas_input").value = polegadas.toFixed(10)
+
+    //exibir na area de resultados
     document.getElementById("resultado_metros").innerHTML=metros.toFixed(10)
     document.getElementById("resultado_quilometros").innerHTML= quilometros.toFixed(10)
     document.getElementById("resultado_polegadas").innerHTML=polegadas.toFixed(10)
@@ -213,6 +249,11 @@ function converter_segundos(){
     console.log(horas)
     
     // retornar o valor para o html
+    //direto para os inputs
+    document.getElementById("minutos_input").value = minutos.toFixed(10)
+    document.getElementById("horas_input").value =horas.toFixed(10)
+    //exibir na area de resultados
+
     document.getElementById("resultado_segundos").innerHTML= segundos.toFixed(10)
     document.getElementById("resultado_minutos").innerHTML= minutos.toFixed(10)
     document.getElementById("resultado_horas").innerHTML=horas.toFixed(10)
@@ -239,6 +280,11 @@ function converter_minutos(){
     console.log(horas)
     
     // retornar o valor para o html
+    //direto para os inputs
+    document.getElementById("segundos_input").value = segundos.toFixed(10)
+    document.getElementById("horas_input").value =horas.toFixed(10)
+
+    //exibir na area de resultados
     document.getElementById("resultado_segundos").innerHTML= segundos.toFixed(10)
     document.getElementById("resultado_minutos").innerHTML= minutos.toFixed(10)
     document.getElementById("resultado_horas").innerHTML=horas.toFixed(10)
@@ -265,9 +311,13 @@ function converter_horas(){
     console.log(horas)
     
     // retornar o valor para o html
+    //direto para os inputs
+    document.getElementById("segundos_input").value = segundos.toFixed(10)
+    document.getElementById("minutos_input").value = minutos.toFixed(10)
+
+    //exibir na area de resultados
     document.getElementById("resultado_segundos").innerHTML= segundos.toFixed(10)
     document.getElementById("resultado_minutos").innerHTML= minutos.toFixed(10)
     document.getElementById("resultado_horas").innerHTML=horas.toFixed(10)
     }
 }
-    
